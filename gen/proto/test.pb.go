@@ -67,7 +67,7 @@ func (x *ResponseRequest) GetMsg() string {
 	return ""
 }
 
-type UserRequest struct {
+type BookRequest struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -75,8 +75,8 @@ type UserRequest struct {
 	Uuid string `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
 }
 
-func (x *UserRequest) Reset() {
-	*x = UserRequest{}
+func (x *BookRequest) Reset() {
+	*x = BookRequest{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_test_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -84,13 +84,13 @@ func (x *UserRequest) Reset() {
 	}
 }
 
-func (x *UserRequest) String() string {
+func (x *BookRequest) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*UserRequest) ProtoMessage() {}
+func (*BookRequest) ProtoMessage() {}
 
-func (x *UserRequest) ProtoReflect() protoreflect.Message {
+func (x *BookRequest) ProtoReflect() protoreflect.Message {
 	mi := &file_test_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -102,19 +102,19 @@ func (x *UserRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use UserRequest.ProtoReflect.Descriptor instead.
-func (*UserRequest) Descriptor() ([]byte, []int) {
+// Deprecated: Use BookRequest.ProtoReflect.Descriptor instead.
+func (*BookRequest) Descriptor() ([]byte, []int) {
 	return file_test_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *UserRequest) GetUuid() string {
+func (x *BookRequest) GetUuid() string {
 	if x != nil {
 		return x.Uuid
 	}
 	return ""
 }
 
-type UserResponse struct {
+type BookResponse struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
@@ -124,8 +124,8 @@ type UserResponse struct {
 	Email string `protobuf:"bytes,3,opt,name=email,proto3" json:"email,omitempty"`
 }
 
-func (x *UserResponse) Reset() {
-	*x = UserResponse{}
+func (x *BookResponse) Reset() {
+	*x = BookResponse{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_test_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -133,13 +133,13 @@ func (x *UserResponse) Reset() {
 	}
 }
 
-func (x *UserResponse) String() string {
+func (x *BookResponse) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*UserResponse) ProtoMessage() {}
+func (*BookResponse) ProtoMessage() {}
 
-func (x *UserResponse) ProtoReflect() protoreflect.Message {
+func (x *BookResponse) ProtoReflect() protoreflect.Message {
 	mi := &file_test_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -151,26 +151,26 @@ func (x *UserResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use UserResponse.ProtoReflect.Descriptor instead.
-func (*UserResponse) Descriptor() ([]byte, []int) {
+// Deprecated: Use BookResponse.ProtoReflect.Descriptor instead.
+func (*BookResponse) Descriptor() ([]byte, []int) {
 	return file_test_proto_rawDescGZIP(), []int{2}
 }
 
-func (x *UserResponse) GetName() string {
+func (x *BookResponse) GetName() string {
 	if x != nil {
 		return x.Name
 	}
 	return ""
 }
 
-func (x *UserResponse) GetAge() int32 {
+func (x *BookResponse) GetAge() int32 {
 	if x != nil {
 		return x.Age
 	}
 	return 0
 }
 
-func (x *UserResponse) GetEmail() string {
+func (x *BookResponse) GetEmail() string {
 	if x != nil {
 		return x.Email
 	}
@@ -183,10 +183,10 @@ var file_test_proto_rawDesc = []byte{
 	0x0a, 0x0a, 0x74, 0x65, 0x73, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x04, 0x6d, 0x61,
 	0x69, 0x6e, 0x22, 0x23, 0x0a, 0x0f, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x65,
 	0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x10, 0x0a, 0x03, 0x6d, 0x73, 0x67, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x22, 0x21, 0x0a, 0x0b, 0x55, 0x73, 0x65, 0x72, 0x52,
+	0x28, 0x09, 0x52, 0x03, 0x6d, 0x73, 0x67, 0x22, 0x21, 0x0a, 0x0b, 0x42, 0x6f, 0x6f, 0x6b, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x75, 0x75, 0x69, 0x64, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x75, 0x75, 0x69, 0x64, 0x22, 0x4a, 0x0a, 0x0c, 0x55, 0x73,
-	0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x75, 0x75, 0x69, 0x64, 0x22, 0x4a, 0x0a, 0x0c, 0x42, 0x6f,
+	0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61,
 	0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x10,
 	0x0a, 0x03, 0x61, 0x67, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x03, 0x61, 0x67, 0x65,
 	0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
@@ -195,9 +195,9 @@ var file_test_proto_rawDesc = []byte{
 	0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
 	0x1a, 0x15, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
 	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x22, 0x00, 0x12, 0x32, 0x0a, 0x07, 0x47, 0x65, 0x74,
-	0x55, 0x73, 0x65, 0x72, 0x12, 0x11, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e, 0x55, 0x73, 0x65, 0x72,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e, 0x55,
-	0x73, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a,
+	0x42, 0x6f, 0x6f, 0x6b, 0x12, 0x11, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e, 0x42, 0x6f, 0x6f, 0x6b,
+	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x12, 0x2e, 0x6d, 0x61, 0x69, 0x6e, 0x2e, 0x42,
+	0x6f, 0x6f, 0x6b, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x42, 0x09, 0x5a,
 	0x07, 0x2e, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
@@ -216,14 +216,14 @@ func file_test_proto_rawDescGZIP() []byte {
 var file_test_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_test_proto_goTypes = []interface{}{
 	(*ResponseRequest)(nil), // 0: main.ResponseRequest
-	(*UserRequest)(nil),     // 1: main.UserRequest
-	(*UserResponse)(nil),    // 2: main.UserResponse
+	(*BookRequest)(nil),     // 1: main.BookRequest
+	(*BookResponse)(nil),    // 2: main.BookResponse
 }
 var file_test_proto_depIdxs = []int32{
 	0, // 0: main.TestApi.Echo:input_type -> main.ResponseRequest
-	1, // 1: main.TestApi.GetUser:input_type -> main.UserRequest
+	1, // 1: main.TestApi.GetBook:input_type -> main.BookRequest
 	0, // 2: main.TestApi.Echo:output_type -> main.ResponseRequest
-	2, // 3: main.TestApi.GetUser:output_type -> main.UserResponse
+	2, // 3: main.TestApi.GetBook:output_type -> main.BookResponse
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -250,7 +250,7 @@ func file_test_proto_init() {
 			}
 		}
 		file_test_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserRequest); i {
+			switch v := v.(*BookRequest); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -262,7 +262,7 @@ func file_test_proto_init() {
 			}
 		}
 		file_test_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserResponse); i {
+			switch v := v.(*BookResponse); i {
 			case 0:
 				return &v.state
 			case 1:

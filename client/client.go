@@ -1,11 +1,12 @@
 package main
 
 import (
-	pb "../gen/proto"
 	"context"
 	"fmt"
-	"google.golang.org/grpc"
 	"log"
+
+	pb "github.com/ajjj001/sl-grpc/gen/proto"
+	"google.golang.org/grpc"
 )
 
 func main() {

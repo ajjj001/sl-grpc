@@ -6,21 +6,20 @@ option go_package = './proto';
 
 service TestApi {
   rpc Echo(ResponseRequest) returns (ResponseRequest) {}
-  rpc GetUser(UserRequest) returns (UserResponse) {}
+  rpc GetBook(BookRequest) returns (BookResponse) {}
 }
 
 message ResponseRequest {
   string msg = 1;
 }
 
-message UserRequest {
+message BookRequest {
   string uuid = 1;
 }
 
-message UserResponse {
+message BookResponse {
   string name = 1;
-  int32 age = 2;
-  string  email = 3;
+  string author = 2;
 }
 
 

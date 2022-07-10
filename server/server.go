@@ -1,26 +1,26 @@
 package main
 
 import (
-	pb "../gen/proto"
 	"context"
-	"google.golang.org/grpc"
 	"log"
 	"net"
+
+	pb "github.com/ajjj001/sl-grpc/gen/proto"
+
+	"google.golang.org/grpc"
 )
 
 type testApiServer struct {
 	pb.UnimplementedTestApiServer
 }
 
-func (s *testApiServer)  GetUser(ctx context.Context,req *pb.UserRequest) (*pb.UserResponse, error) {
-	return &pb.UserResponse{}, nil
+func (s *testApiServer) GetBook(ctx context.Context, req *pb.BookRequest) (*pb.BookResponse, error) {
+	return &pb.BookResponse{}, nil
 }
 
-
-func (s *testApiServer)  Echo(ctx context.Context,req *pb.ResponseRequest) (*pb.ResponseRequest, error) {
- return req, nil
+func (s *testApiServer) Echo(ctx context.Context, req *pb.ResponseRequest) (*pb.ResponseRequest, error) {
+	return req, nil
 }
-
 
 func main() {
 
@@ -29,11 +29,11 @@ func main() {
 		log.Fatal(err)
 	}
 
-  grpcServer :=	grpc.NewServer()
+	grpcServer := grpc.NewServer()
 
-  pb.RegisterTestApiServer(grpcServer, &testApiServer{})
+	pb.RegisterTestApiServer(grpcServer, &testApiServer{})
 
-  err = grpcServer.Serve(listener)
+	err = grpcServer.Serve(listener)
 	if err != nil {
 		log.Println(err)
 	}
